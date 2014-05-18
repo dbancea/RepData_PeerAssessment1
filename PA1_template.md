@@ -76,7 +76,9 @@ meanStepsPerInterval <- aggregate(steps ~ interval, data = activity, FUN = mean,
 * Draw a time serie graph with interval on x-axis and the average of number of steps per interval on y-axis
 
 ```r
-plot(meanStepsPerInterval$interval, meanStepsPerInterval$steps, type = "l")
+plot(meanStepsPerInterval$interval, meanStepsPerInterval$steps, type = "l", 
+    main = "Average number of steps per 5 min interval", xlab = "Interval (5 minutes)", 
+    ylab = "Average number of steps")
 ```
 
 ![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8.png) 
